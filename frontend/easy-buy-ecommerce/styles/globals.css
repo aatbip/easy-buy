@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@500&family=Montserrat&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+.container {
+  width: 100%;
+}
+
+.wrapper {
+  width: 90%;
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 650px) {
+  .wrapper {
+    width: 80%;
+  }
+}
+
+.layout-gradient {
+  background: #020024;
+  background: linear-gradient(
+    357deg,
+    rgba(2, 0, 36, 1) 0%,
+    #000000 23%,
+    #3b3b3d 57%
+  );
+}
+
+.flex-row-nowrap {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.error-text {
+  color: #c21a1a;
+}
+
+.error-input-box {
+  border: 1px solid #c21a1a;
+}
+.error-input-box:focus {
+  border: 1px solid #c21a1a;
+  outline: none;
+  box-shadow: 0 0 10px #719ece;
+}

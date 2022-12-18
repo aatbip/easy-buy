@@ -1,0 +1,48 @@
+.wrapper {
+  width: 180px;
+  padding: 15px 2px;
+  background-color: #272626;
+  border-radius: 5px;
+  color: white;
+  position: absolute;
+  top: 50px;
+  /* transform: translate(-75%, 30px) !important;  */
+  text-align: center;
+}
+
+.wrapper li {
+  list-style-type: none;
+  cursor: pointer;
+  font-size: 20px;
+  padding: 5px 0px; 
+}
+
+.wrapper li:hover {
+    opacity: 0.7;
+}
+
+.wrapper li:after {
+  content: "";
+  border-bottom: 2px solid #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 5px 0px; 
+
+
+}
+
+.wrapper li:last-child::after {
+  content: "";
+  border-bottom: none;
+  margin: 0px;
+  padding: 0px; 
+}
+
+.hamburgerIcon {
+  display: flex;
+  justify-content: right;
+}
+
+.hamburgerIcon:hover {
+  cursor: pointer;
+}
