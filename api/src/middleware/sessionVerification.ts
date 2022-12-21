@@ -36,11 +36,13 @@ const setNewAccessTokenByVerifyingRefreshToken = asyncWrapper(
     res: Response,
     next: NextFunction
   ) => {
-    const { refreshToken } = req.cookies.userCredentials;
+    const { refreshToken } = JSON.parse(req.cookies.userCredentials);
+
 
     const isRefreshTokenExist = await RefreshToken.findOne({
       refreshToken: refreshToken,
     });
+
 
     if (!isRefreshTokenExist) {
       return res

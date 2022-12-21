@@ -15,11 +15,12 @@ const Auth = ({ children }: props): React.ReactElement => {
     if (Cookies.get("userCredentials")) {
       try {
         const res = await axios.get("/auth/verifysession");
+        console.log(res); 
         if (res.data.status === "success") store.dispatch(setUser());
       } catch (error: any) {
         if (error.response?.data.status === "failure") {
           store.dispatch(unSetUser());
-          store.dispatch(signOut());
+          // store.dispatch(signOut());
           router.push("/");
         }
       }

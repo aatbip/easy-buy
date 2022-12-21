@@ -9,6 +9,7 @@ declare global {
       JWT_SECRET: string;
       ACCESS_TOKEN_LIFETIME: number | string;
       REFRESH_TOKEN_LIFETIME: number | string;
+      FRONTEND_URL: string;
     }
   }
 }
